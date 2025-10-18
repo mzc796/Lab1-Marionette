@@ -36,6 +36,12 @@ NOTE: After installation and reboot, please DO NOT select `Install Now` when the
 3. Mininet (any version supports OpenFlow v1.3)
 
 ## Build and Run OpenDaylight VM
+0. Enable copy and paste between VM and host machine
+   ```
+   sudo apt update
+   sudo apt install open-vm-tools-desktop
+   ```
+   Restart the VM to bring it into effect
 1. Install Python3.9 and stable-baselines3
   ```
   sudo apt-get update
