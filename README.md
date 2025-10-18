@@ -31,9 +31,9 @@ Installation Disc: ubuntu-24.04.4-desktop-arm64.iso
 
 NOTE: After installation and reboot, please DO NOT select `Install Now` when the `Software Updater` window pops up. Otherwise, it may cause an error of `not enough space` later. High memory and storage are required due to the reinforcement learning algorithm.
 ## Software Dependencies
-1. OpenDaylight Calcium
-2. Stable-baselines3==1.7.0
-3. Mininet (any version supports OpenFlow v1.3)
+1. [OpenDaylight Calcium](https://docs.opendaylight.org/en/stable-calcium/downloads.html)
+2. [Stable-baselines3](https://stable-baselines3.readthedocs.io/en/master/)
+3. [Mininet](https://mininet.org/walkthrough/) (any version supports OpenFlow v1.3)
 
 ## Build and Run OpenDaylight VM
 0. Enable copy and paste between VM and host machine
@@ -121,13 +121,13 @@ feature:install odl-openflowplugin-app-topology-lldp-discovery odl-openflowplugi
   sudo apt-get update
   sudo apt-get install mininet
   ```
-2. Download this project ``marionette_odl.zip`` and extract it to $HOME
+2. Download this project either via ``Lab1-Marionette-master.zip`` and extract it to $HOME or ``git clone https://github.com/mzc796/Lab1-Marionette.git`` 
    
-   NOTE: If you download the code from GitHub and the name is ```marionette_odl-master.zip```, please change the folder name to ```marionette_odl``` after extracting it to $HOME.
+   NOTE: If the folder name is with ```master```, remove it and make it ```Lab1-Marionette```.
    
 4. Run Mininet with Customized Topology and Connect to Remote Controller with $IP_ODL
   ``` 
-  cd marionette_odl/mininet_fattree
+  cd Lab1-Marionette/mininet_fattree
   sudo chmod 774 fattree_mn_run.sh dump_flows.sh
   sudo ./fattree_mn_run.sh $IP_ODL
   ```
@@ -155,13 +155,13 @@ To efficiently demonstrate Marionette with budgeted time (within 5 minutes) and 
 In `main.py`, we set the eavesdropping node as node 6 (openflow:7), the expected increased number of eavesdropping flows is 4, the similarity lower bound is 80%, and the degree sequence must remain unchanged after altering the topology.
 
 1. Open another terminal on the OpenDaylight VM
-2. Download this project ``marionette_odl.zip`` and extract it to $HOME.
+2. Download this project either via ``Lab1-Marionette-master.zip`` and extract it to $HOME or ``git clone https://github.com/mzc796/Lab1-Marionette.git``
    
-   NOTE: If you download the code from GitHub and the name is ```marionette_odl-master.zip```, please change the folder name to ```marionette_odl``` after extracting it to $HOME.
+   NOTE: If the folder name is with ```master```, remove it and make it ```Lab1-Marionette```.
    
 3. Run Marionette
   ```
-  cd marionette_odl/
+  cd Lab1-Marionette/
   python3.9 main.py
   ```
 ### Result
@@ -170,7 +170,7 @@ In `main.py`, we set the eavesdropping node as node 6 (openflow:7), the expected
 
   - topo_original.png: The topology discovered by the ODL controller before being poisoned, which is the real topology.
 
-  - RL_topo.png: The Reinforcement Learning produced deceptive topology.
+  - RL_topo.png: The Reinforcement Learning computed deceptive topology.
 
   - topo_deceptive.png: The topology discovered by the ODL controller after being poisoned by Marionette, which is the deceptive topology.
 
