@@ -148,16 +148,14 @@ To efficiently demonstrate Marionette with budgeted time (within 5 minutes) and 
 
 In `main.py`, we set the eavesdropping node as node 6 (openflow:7), the expected increased number of eavesdropping flows is 4, the similarity lower bound is 80%, and the degree sequence must remain unchanged after altering the topology.
 
-1. Open another terminal on the OpenDaylight VM
-2. Download this project either via ``Lab1-Marionette-master.zip`` and extract it to $HOME or ``git clone https://github.com/mzc796/Lab1-Marionette.git``
-   
-   NOTE: If the folder name is with ```master```, remove it and make it ```Lab1-Marionette```.
-   
-3. Run Marionette
+1. Open another terminal and run Marionette
   ```
   cd Lab1-Marionette/
   python3.9 main.py
   ```
+The RL starts and returns the best deceptive topology it computed. 
+
+Automatically, the Marionette composes corresponding malicious flow entries, inducing the benign controller(s) to discover the deceptive topology we computed via RL. 
 ### Result
   
  After the program is finished, we go to the 'figure' folder. There will be three figures:
