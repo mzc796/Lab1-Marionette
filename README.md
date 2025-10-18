@@ -24,9 +24,10 @@ Memory: 32GB
 
 Storage: 50GB
 
-CPU: 2 cores, ARM64 Architecture
+CPU: 2 cores
 
 Installation Disc: ubuntu-24.04.4-desktop-arm64.iso
+
 [noble-desktop-amd64.iso](https://cdimage.ubuntu.com/noble/daily-live/current/)
 
 NOTE: After installation and reboot, please DO NOT select `Install Now` when the `Software Updater` window pops up. Otherwise, it may cause an error of `not enough space` later. High memory and storage are required due to the reinforcement learning algorithm.
