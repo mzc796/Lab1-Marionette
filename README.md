@@ -18,6 +18,8 @@ Marionette attacks OpenDaylight Calcium (karaf-0.20.1.zip) from a malicious appl
 ## Virtual Machine Platform
 VMware Fusion
 ## Virtual Machine Summary
+Architecture: ARM64 (Apple Silicon)
+
 Memory: 32GB
 
 Storage: 50GB
