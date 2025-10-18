@@ -112,26 +112,20 @@ feature:install odl-openflowplugin-app-topology-lldp-discovery odl-openflowplugi
   ```
   NOTE: If ```tcp *:6653 (LISTEN)``` and ```tcp *:8181 (LISTEN)``` do not show, shut down OpenDaylight with ```Control+D``` and restart ```sudo ./karaf```
 
-## Build and Run Mininet VM
+## Build and Run Mininet
    
-  We build another VM to run Mininet. The Mininet VM use the ODL VM setting but with Memory:4GB, Storage: 50GB
-
+  We run Mininet in the same VM. 
 1. Install mininet
   ```
   sudo apt-get update
   sudo apt-get install mininet
   ```
-2. Download this project either via ``Lab1-Marionette-master.zip`` and extract it to $HOME or ``git clone https://github.com/mzc796/Lab1-Marionette.git`` 
-   
-   NOTE: If the folder name is with ```master```, remove it and make it ```Lab1-Marionette```.
-   
-4. Run Mininet with Customized Topology and Connect to Remote Controller with $IP_ODL
+2. Run Mininet with Customized Topology and Connect to Remote Controller with local IP address
   ``` 
   cd Lab1-Marionette/mininet_fattree
   sudo chmod 774 fattree_mn_run.sh dump_flows.sh
-  sudo ./fattree_mn_run.sh $IP_ODL
+  sudo ./fattree_mn_run.sh 127.0.0.1
   ```
-  NOTE: The $IP_ODL can be known with the command ```ifconfig``` on OpenDaylight VM.
 
   If the connection between ODL and mininet is successful, the mininet terminal shows: 
   ```
