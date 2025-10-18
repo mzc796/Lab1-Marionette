@@ -134,7 +134,7 @@ feature:install odl-openflowplugin-app-topology-lldp-discovery odl-openflowplugi
   *** Adding hosts:
   ...
   ```
-  Otherwise, there will be ``Unable to connect the remote controller at $IP_ODL`` after ``*** Adding controller``
+  Otherwise, there will be ``Unable to connect the remote controller at 127.0.0.1`` after ``*** Adding controller``
 ### Utility for Checking Flow Entries 
   ```
   sudo ./dump_flows.sh $sw_id
